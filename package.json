@@ -13,31 +13,30 @@
     "license": "MIT",
     "author": "sofransebastian",
     "type": "module",
-    "main": "lib/index.cjs",
+    "main": "lib/cjs/index.js",
     "exports": {
         "import": {
-            "default": "./lib/index.esm.js",
+            "default": "./lib/esm/index.js",
             "types": "./lib/types/index.d.ts"
         },
         "require": {
-            "default": "./lib/index.cjs",
+            "default": "./lib/cjs/index.js",
             "types": "./lib/types/index.d.ts"
         }
     },
     "files": [
         "lib"
     ],
+    "sideEffects": false,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "rollup -c",
+        "build": "rimraf ./lib &&tsc --skipLibCheck --project tsconfig.esm.json && tsc --skipLibCheck --project tsconfig.cjs.json",
         "release-package": "npm run build && npx changeset publish"
     },
     "devDependencies": {
         "@changesets/cli": "^2.29.8",
         "react": "^19.2.3",
-        "rollup": "^4.55.1",
-        "rollup-plugin-delete": "^3.0.2",
-        "rollup-plugin-typescript2": "^0.36.0",
+        "rimraf": "^6.1.2",
         "typescript": "^5.9.3"
     },
     "keywords": [
