@@ -21,74 +21,81 @@ npm install @sofransebastian/react-micro-hooks
 yarn add @sofransebastian/react-micro-hooks
 ```
 
-```bash
-pnpm add @sofransebastian/react-micro-hooks
-```
-
 ## ✨ Features
 
 -   🎯 **Single-responsibility** - Each hook does one thing well
 -   📦 **Lightweight** - Minimal dependencies, tree-shakeable
 -   🔒 **Type-safe** - Full TypeScript support
 -   ⚡ **Modern** - ESM and CommonJS support
--   🧪 **Well-tested** - Production-ready code
 
 ## 🚀 Hooks
 
-### `useDebounce`
+#### `useDebounce`
 
 <details>
 <summary>Show example</summary>
 
 ```tsx
-import { useState, useEffect } from 'react';
-import { useDebounce } from '@sofransebastian/react-micro-hooks';
+const [input, setInput] = useState('');
+const debouncedInput = useDebounce(input, 300);
 
-function SearchBox() {
-    const [input, setInput] = useState('');
-    const debouncedInput = useDebounce(input, 300);
-
-    useEffect(() => {
-        if (debouncedInput) {
-            console.log('Searching for:', debouncedInput);
-            // Perform API call here
-        }
-    }, [debouncedInput]);
-
-    return (
-        <input
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Type to search..."
-        />
-    );
-}
+useEffect(() => {
+    if (debouncedInput) {
+        // Perform API call here
+    }
+}, [debouncedInput]);
 ```
 
 </details>
 
-### `useMediaQuery`
+#### `useMediaQuery`
 
 <details>
 <summary>Show example</summary>
 
 ```tsx
-import { useMediaQuery } from '@sofransebastian/react-micro-hooks';
+const isMobile = useMediaQuery('(max-width: 768px)');
+const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
 
-function App() {
-    const isTablet = useMediaQuery(
-        '(min-width: 768px) and (max-width: 1024px)'
-    );
-    const isDesktop = useMediaQuery('(min-width: 1024px)');
+return (
+    <div>
+        {isMobile ? <MobileLayout /> : <DesktopLayout />}
+        {isDarkMode && <DarkModeIndicator />}
+    </div>
+);
+```
 
-    return (
-        <div>
-            {isDesktop && <DesktopHeader />}
-            {isTablet && <TabletHeader />}
-            {!isTablet && !isDesktop && <MobileHeader />}
-        </div>
-    );
-}
+</details>
+
+#### `usePrevious`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+const [count, setCount] = useState(0);
+const previousCount = usePrevious(count);
+
+return (
+    <div>
+        <p>Current: {count}</p>
+        <p>Previous: {previousCount}</p>
+        <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+);
+```
+
+</details>
+
+#### `useOnlineStatus`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+const isOnline = useOnlineStatus();
+
+return <div>{isOnline ? <span>🟢 Online</span> : <span>🔴 Offline</span>}</div>;
 ```
 
 </details>
