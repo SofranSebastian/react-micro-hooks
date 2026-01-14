@@ -1,0 +1,1 @@
+export { mockupFunction } from './mockupFunction';
