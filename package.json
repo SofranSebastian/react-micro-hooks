@@ -1,6 +1,6 @@
 {
     "name": "@sofransebastian/react-micro-hooks",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "description": "Collection of single-responsibility React hooks for common use cases",
     "homepage": "https://github.com/SofranSebastian/react-micro-hooks#readme",
     "bugs": {

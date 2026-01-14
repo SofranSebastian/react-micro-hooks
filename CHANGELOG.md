@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.4.1
+
+### Patch Changes
+
+- d4efa06: Using tsc as build tool for tree shaking
+
 ## 1.4.0
 
 ### Minor Changes
