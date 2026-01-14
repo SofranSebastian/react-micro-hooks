@@ -37,53 +37,8 @@ pnpm add @sofransebastian/react-micro-hooks
 
 ### `useDebounce`
 
-```tsx
-import { useDebounce } from '@sofransebastian/react-micro-hooks';
-
-function SearchComponent() {
-    const [searchTerm, setSearchTerm] = useState('');
-    const debouncedSearchTerm = useDebounce(searchTerm, 500);
-
-    useEffect(() => {
-        // This will only run 500ms after the user stops typing
-        if (debouncedSearchTerm) {
-            performSearch(debouncedSearchTerm);
-        }
-    }, [debouncedSearchTerm]);
-
-    return (
-        <input
-            type="text"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            placeholder="Search..."
-        />
-    );
-}
-```
-
-### `useMediaQuery`
-
-```tsx
-import { useMediaQuery } from '@sofransebastian/react-micro-hooks';
-
-function ResponsiveComponent() {
-    const isMobile = useMediaQuery('(max-width: 768px)');
-    const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
-
-    return (
-        <div>
-            {isMobile ? <MobileLayout /> : <DesktopLayout />}
-
-            {isDarkMode && <DarkModeIndicator />}
-        </div>
-    );
-}
-```
-
-## 📚 Examples
-
-### Debounced Search Input
+<details>
+<summary>Show example</summary>
 
 ```tsx
 import { useState, useEffect } from 'react';
@@ -110,7 +65,12 @@ function SearchBox() {
 }
 ```
 
-### Responsive Layout
+</details>
+
+### `useMediaQuery`
+
+<details>
+<summary>Show example</summary>
 
 ```tsx
 import { useMediaQuery } from '@sofransebastian/react-micro-hooks';
@@ -130,6 +90,8 @@ function App() {
     );
 }
 ```
+
+</details>
 
 ## 🛠️ Requirements
 
