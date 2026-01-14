@@ -1,0 +1,20 @@
+{
+  "name": "react-micro-hooks",
+  "version": "1.0.0",
+  "description": "Collection of single-responsibility React hooks for common use cases",
+  "homepage": "https://github.com/SofranSebastian/react-micro-hooks#readme",
+  "bugs": {
+    "url": "https://github.com/SofranSebastian/react-micro-hooks/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofranSebastian/react-micro-hooks.git"
+  },
+  "license": "MIT",
+  "author": "sofransebastian",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
