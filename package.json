@@ -13,7 +13,20 @@
     "license": "MIT",
     "author": "sofransebastian",
     "type": "module",
-    "main": "index.js",
+    "main": "lib/index.cjs",
+    "exports": {
+        "import": {
+            "default": "./lib/index.esm.js",
+            "types": "./lib/types/index.d.ts"
+        },
+        "require": {
+            "default": "./lib/index.cjs",
+            "types": "./lib/types/index.d.ts"
+        }
+    },
+    "files": [
+        "lib"
+    ],
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "rollup -c"
