@@ -2,7 +2,7 @@
     "compilerOptions": {
         "declaration": true,
         "declarationDir": "lib/types",
-        "target": "es6",
+        "jsx": "react-jsx",
         "moduleResolution": "node"
     },
     "include": ["src/**/*"],
