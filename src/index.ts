@@ -1,1 +1,1 @@
-export { mockupFunction } from './mockupFunction';
+export { useDebounce } from './hooks/useDebounce';
