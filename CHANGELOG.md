@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.2.1
+
+### Patch Changes
+
+- de3b2d7: Updated the README.md
+
 ## 1.2.0
 
 ### Minor Changes
