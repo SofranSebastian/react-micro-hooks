@@ -38,5 +38,12 @@
         "rollup-plugin-delete": "^3.0.2",
         "rollup-plugin-typescript2": "^0.36.0",
         "typescript": "^5.9.3"
-    }
+    },
+    "keywords": [
+        "react",
+        "hooks",
+        "utilities",
+        "micro",
+        "typescript"
+    ]
 }
