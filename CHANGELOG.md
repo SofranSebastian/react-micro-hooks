@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.4.0
+
+### Minor Changes
+
+- 22ac04a: Created the useOnlineStatus micro hook
+
 ## 1.3.0
 
 ### Minor Changes
