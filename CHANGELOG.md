@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.6.0
+
+### Minor Changes
+
+- 8dc8904: Created the useWorkflow hook
+
 ## 1.5.0
 
 ### Minor Changes
