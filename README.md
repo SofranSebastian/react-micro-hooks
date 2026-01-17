@@ -11,6 +11,8 @@
 
 </div>
 
+> **⚠️ Disclaimer:** This library is experimental and designed for development environments only. If you plan to use it in a production environment, please thoroughly test it first to ensure it meets your requirements and works correctly in your specific use case.
+
 ## 📦 Installation
 
 ```bash
