@@ -100,6 +100,27 @@ return <div>{isOnline ? <span>🟢 Online</span> : <span>🔴 Offline</span>}</d
 
 </details>
 
+#### `useGeolocation`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+const { position, error, isLoading } = useGeolocation();
+
+if (isLoading) return <div>Loading location...</div>;
+if (error) return <div>Error: {error}</div>;
+
+return (
+    <div>
+        <p>Lat: {position.latitude}</p>
+        <p>Lng: {position.longitude}</p>
+    </div>
+);
+```
+
+</details>
+
 ## 🛠️ Requirements
 
 -   React 16.8+ (hooks support)
