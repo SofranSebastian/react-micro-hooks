@@ -32,6 +32,52 @@ yarn add @sofransebastian/react-micro-hooks
 
 ## 🚀 Hooks
 
+#### `useWorkflow`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+const steps = [
+  {
+    id: 'account',
+    onNext: () => form.isValid(),
+  },
+  {
+    id: 'profile',
+    onNext: async () => {
+      await saveProfile();
+      return true;
+    },
+  },
+  {
+    id: 'confirm',
+  },
+];
+
+const workflow = useWorkflow(steps, {
+  onFinish: () => console.log('Done'),
+});
+
+switch (workflow.stepId) {
+  case 'account':
+    return <AccountStep onNext={workflow.next} />;
+
+  case 'profile':
+    return (
+      <ProfileStep
+        onNext={workflow.next}
+        onBack={workflow.back}
+      />
+    );
+
+  case 'confirm':
+    return <ConfirmStep onSubmit={workflow.next} />;
+}
+```
+
+</details>
+
 #### `useDebounce`
 
 <details>
