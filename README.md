@@ -11,6 +11,8 @@
 
 </div>
 
+> **⚠️ Disclaimer:** This library is experimental and designed for development environments only. If you plan to use it in a production environment, please thoroughly test it first to ensure it meets your requirements and works correctly in your specific use case.
+
 ## 📦 Installation
 
 ```bash
@@ -96,6 +98,27 @@ return (
 const isOnline = useOnlineStatus();
 
 return <div>{isOnline ? <span>🟢 Online</span> : <span>🔴 Offline</span>}</div>;
+```
+
+</details>
+
+#### `useGeolocation`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+const { position, error, isLoading } = useGeolocation();
+
+if (isLoading) return <div>Loading location...</div>;
+if (error) return <div>Error: {error}</div>;
+
+return (
+    <div>
+        <p>Lat: {position.latitude}</p>
+        <p>Lng: {position.longitude}</p>
+    </div>
+);
 ```
 
 </details>
