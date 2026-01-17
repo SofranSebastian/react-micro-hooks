@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.5.0
+
+### Minor Changes
+
+- 03d5b57: Created useGeolocation micro hook
+
 ## 1.4.1
 
 ### Patch Changes
