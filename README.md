@@ -32,7 +32,7 @@ yarn add @sofransebastian/react-micro-hooks
 
 ## 🚀 Hooks
 
-#### `useWorkflow`
+#### `useClipboard`
 
 <details>
 <summary>Show example</summary>
