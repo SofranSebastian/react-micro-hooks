@@ -38,41 +38,53 @@ yarn add @sofransebastian/react-micro-hooks
 <summary>Show example</summary>
 
 ```tsx
+const { copied, copy } = useClipboard();
+<button onClick={() => copy('text')}>{copied ? '✅' : '📋'}</button>;
+```
+
+</details>
+
+#### `useWorkflow`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
 const steps = [
-  {
-    id: 'account',
-    onNext: () => form.isValid(),
-  },
-  {
-    id: 'profile',
-    onNext: async () => {
-      await saveProfile();
-      return true;
+    {
+        id: 'account',
+        onNext: () => form.isValid(),
     },
-  },
-  {
-    id: 'confirm',
-  },
+    {
+        id: 'profile',
+        onNext: async () => {
+            await saveProfile();
+            return true;
+        },
+    },
+    {
+        id: 'confirm',
+    },
 ];
 
 const workflow = useWorkflow(steps, {
-  onFinish: () => console.log('Done'),
+    onFinish: () => console.log('Done'),
 });
 
 switch (workflow.stepId) {
-  case 'account':
-    return <AccountStep onNext={workflow.next} />;
+    case 'account':
+        return <AccountStep onNext={workflow.next} />;
 
-  case 'profile':
-    return (
-      <ProfileStep
-        onNext={workflow.next}
-        onBack={workflow.back}
-      />
-    );
+    case 'profile':
+        return (
+            <ProfileStep
+                onNext={workflow.next}
+                onBack={workflow.back}
+            />
+        );
 
-  case 'confirm':
-    return <ConfirmStep onSubmit={workflow.next} />;
+    case 'confirm':
+        return <ConfirmStep onSubmit={workflow.next} />;
 }
 ```
 
