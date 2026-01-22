@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.7.0
+
+### Minor Changes
+
+- ef0e9bd: Create useClipboard micro hook
+
 ## 1.6.0
 
 ### Minor Changes
