@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.7.1
+
+### Patch Changes
+
+- 4352a8e: Update README.md typo
+
 ## 1.7.0
 
 ### Minor Changes
