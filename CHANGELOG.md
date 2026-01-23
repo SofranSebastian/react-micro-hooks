@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.8.0
+
+### Minor Changes
+
+- 321793a: Create useWebSocket hook
+
 ## 1.7.1
 
 ### Patch Changes
