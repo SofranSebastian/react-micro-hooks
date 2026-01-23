@@ -32,6 +32,30 @@ yarn add @sofransebastian/react-micro-hooks
 
 ## 🚀 Hooks
 
+#### `useWebSocket`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+function Notifications() {
+    const { lastMessage } = useWebSocket<Notification>(
+        'wss://api.example.com/notifications'
+    );
+
+    return (
+        <div>
+            {lastMessage && (
+                <div className="notification">🔔 {lastMessage.text}</div>
+            )}
+        </div>
+    );
+}
+tsx;
+```
+
+</details>
+
 #### `useClipboard`
 
 <details>
