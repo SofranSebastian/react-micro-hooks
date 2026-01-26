@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.9.0
+
+### Minor Changes
+
+- c75062a: Create useStateWithCallback micro hook
+
 ## 1.8.0
 
 ### Minor Changes
