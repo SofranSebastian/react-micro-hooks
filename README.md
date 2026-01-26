@@ -32,6 +32,28 @@ yarn add @sofransebastian/react-micro-hooks
 
 ## 🚀 Hooks
 
+#### `useStateWithCallback`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+function Component() {
+    const [count, setCount] = useStateWithCallback(0);
+
+    const increment = () => {
+        setCount(count + 1, (newValue) =>
+            console.log('Count updated to:', newValue)
+        );
+    };
+
+    return <button onClick={increment}>{count}</button>;
+}
+tsx;
+```
+
+</details>
+
 #### `useWebSocket`
 
 <details>
