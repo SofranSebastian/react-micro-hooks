@@ -1,5 +1,11 @@
 # @sofransebastian/react-micro-hooks
 
+## 1.10.0
+
+### Minor Changes
+
+- e4ef915: Created the useStateWithEqualityChecks micro hook
+
 ## 1.9.0
 
 ### Minor Changes
