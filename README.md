@@ -32,6 +32,29 @@ yarn add @sofransebastian/react-micro-hooks
 
 ## 🚀 Hooks
 
+#### `useStateWithEqualityCheck`
+
+<details>
+<summary>Show example</summary>
+
+```tsx
+function UserProfile() {
+    const [user, setUser] = useStateWithEqualityCheck(
+        { name: 'John', age: 30 },
+        (a, b) => a.name === b.name && a.age === b.age
+    );
+
+    // This will NOT cause a re-render
+    setUser({ name: 'John', age: 30 });
+
+    // This WILL cause a re-render
+    setUser({ name: 'John', age: 31 });
+}
+tsx;
+```
+
+</details>
+
 #### `useStateWithCallback`
 
 <details>

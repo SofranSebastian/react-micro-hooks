@@ -6,3 +6,4 @@ export { useGeolocation } from './hooks/useGeolocation';
 export { useClipboard } from './hooks/useClipboard';
 export { useWebSocket } from './hooks/useWebSocket';
 export { useStateWithCallback } from './hooks/useStateWithCallback';
+export { useStateWithEqualityCheck } from './hooks/useStateWithEqualityCheck';
